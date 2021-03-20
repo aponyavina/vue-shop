@@ -7,8 +7,10 @@
                 <div class="product-slider">
                     <img :src="product.img" :alt="product.title">
                 </div>
-                <h1> {{product.title}} </h1>
-                <p> {{product.descr}} </p>
+                <div class="product-content">
+                    <h1 class="title"> {{product.title}} </h1>
+                    <p> {{product.descr}} </p>
+                </div>
             </div>
         </div>
       </section>
@@ -31,3 +33,16 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.product__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-slider, .product-content {
+    max-width: 48%;
+    text-align: center;
+}
+</style>
